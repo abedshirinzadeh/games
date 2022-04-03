@@ -1,0 +1,33 @@
+//////////////// html codes//////////////////////
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>eight ball</title>
+
+</head>
+
+<body>
+    <div style="font-size: larger; color: blue;" >ask your question ?</div>
+    <br>
+    <input style="background-color: aqua;" type="text" placeholder="question" >
+    <input style="background-color: red;" type="button" value="ask">
+    <div class="message"></div>
+    <script src="abedjava.js"></script>
+</body>
+</html>
+
+/////////////////////js codes/////////////////////////
+
+const answerarray = ['it will work', 'maybe not work', 'probably not work', 'i dont know'];
+const messages = document.querySelector("message");
+const question = document.querySelector("input");
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+    let response = math.floor(math.random() * answerarray.length);
+    messages.innerHTML = question.value + " " + answerarray[response];
+    question.value = "";
+
+});
+
+//////////////////////finish kon golabi/////////////////////////////
